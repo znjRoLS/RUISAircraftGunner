@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 3950152dd31afdd4eac2b6696f2652fc
+timeCreated: 1443367866
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - myo: {instanceID: 0}
+  - sphere: {instanceID: 0}
+  - shuriken: {instanceID: 0}
+  - hand: {instanceID: 0}
+  - foreArm: {instanceID: 0}
+  - upperArm: {instanceID: 0}
+  - pathsColliders: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

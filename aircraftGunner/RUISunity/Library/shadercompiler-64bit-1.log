@@ -1,0 +1,10 @@
+Base path: C:/Program Files/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-5232
+Cmd: getPlatforms
+Cmd: preprocess
+  error: 1 plat 18 at (106): Both vertex and fragment programs must be present in a CGPROGRAM. Excluding it from compilation.
+  insize=2951 outsize=2248 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=975 outsize=1615 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=975 outsize=518 kw= pd= ok=1

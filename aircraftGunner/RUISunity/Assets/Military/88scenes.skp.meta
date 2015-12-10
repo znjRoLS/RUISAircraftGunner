@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 682021eeb6d7c4d44bc5b3f34654ca57
+timeCreated: 1443286523
+licenseType: Free
+SketchUpImporter:
+  generateBackFace: 0
+  mergeCoplanarFaces: 0
+  selectedNodes: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e000000
+  assetHash:
+    serializedVersion: 2
+    Hash: 385823228186212e3f84699d6fd38130
+  longitude: -105.283
+  latitude: 40.017000000000003
+  northCorrection: -0
+  fileUnit: 0
+  sketchUpImportData:
+    defaultCamera:
+      position: {x: 8.00623417, y: 2.90311956, z: 15.692709}
+      lookAt: {x: -3.07444525, y: 3.72364283, z: 6.8478322}
+      up: {x: .0451550521, y: .99832958, z: .0360438935}
+      fov: 35
+      aspectRatio: 0
+      orthoSize: 1
+      isPerspective: 1
+    scenes:
+    - camera:
+        position: {x: 0, y: .0253999997, z: 0}
+        lookAt: {x: 0, y: 0, z: 0}
+        up: {x: 0, y: 0, z: 1}
+        fov: 30
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 3
+    - camera:
+        position: {x: 0, y: .0253999997, z: 0}
+        lookAt: {x: 0, y: 0, z: 0}
+        up: {x: 0, y: 0, z: 1}
+        fov: 30
+        aspectRatio: 0
+        orthoSize: 1
+        isPerspective: 1
+      name: Scene 1
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: 88poot#1
+    100002: 88poot#1 1
+    100004: //RootNode
+    100006: barrel
+    100008: Component#1
+    100010: Component#1 1
+    100012: Component#17
+    100014: Component#17 1
+    100016: Component#17 2
+    100018: Component#17 3
+    100020: Component#2
+    100022: Component#23
+    100024: Component#23 1
+    100026: Component#23 2
+    100028: Component#23 3
+    100030: Component#24
+    100032: Component#25
+    100034: Component#26
+    100036: Component#27
+    100038: Component#27 1
+    100040: Component#28
+    100042: Component#29
+    100044: Component#3
+    100046: Component#30
+    100048: flakgun type 18
+    100050: franknewqq332123212aadsdt166
+    100052: Group 11
+    100054: Group 13
+    100056: Group 29
+    100058: Group#3
+    100060: Group#5
+    100062: Omni_0
+    100064: Omni_0 1
+    400000: 88poot#1
+    400002: 88poot#1 1
+    400004: //RootNode
+    400006: barrel
+    400008: Component#1
+    400010: Component#1 1
+    400012: Component#17
+    400014: Component#17 1
+    400016: Component#17 2
+    400018: Component#17 3
+    400020: Component#2
+    400022: Component#23
+    400024: Component#23 1
+    400026: Component#23 2
+    400028: Component#23 3
+    400030: Component#24
+    400032: Component#25
+    400034: Component#26
+    400036: Component#27
+    400038: Component#27 1
+    400040: Component#28
+    400042: Component#29
+    400044: Component#3
+    400046: Component#30
+    400048: flakgun type 18
+    400050: franknewqq332123212aadsdt166
+    400052: Group 11
+    400054: Group 13
+    400056: Group 29
+    400058: Group#3
+    400060: Group#5
+    400062: Omni_0
+    400064: Omni_0 1
+    2300000: 88poot#1
+    2300002: 88poot#1 1
+    2300004: barrel
+    2300006: Component#1
+    2300008: Component#1 1
+    2300010: Component#17
+    2300012: Component#17 1
+    2300014: Component#17 2
+    2300016: Component#17 3
+    2300018: Component#2
+    2300020: Component#23
+    2300022: Component#23 1
+    2300024: Component#23 2
+    2300026: Component#23 3
+    2300028: Component#24
+    2300030: Component#25
+    2300032: Component#26
+    2300034: Component#27
+    2300036: Component#27 1
+    2300038: Component#28
+    2300040: Component#29
+    2300042: Component#3
+    2300044: Component#30
+    2300046: Group 11
+    2300048: Group 13
+    2300050: Group 29
+    2300052: Group#3
+    2300054: Group#5
+    2300056: Omni_0
+    2300058: Omni_0 1
+    3300000: 88poot#1
+    3300002: 88poot#1 1
+    3300004: barrel
+    3300006: Component#1
+    3300008: Component#1 1
+    3300010: Component#17
+    3300012: Component#17 1
+    3300014: Component#17 2
+    3300016: Component#17 3
+    3300018: Component#2
+    3300020: Component#23
+    3300022: Component#23 1
+    3300024: Component#23 2
+    3300026: Component#23 3
+    3300028: Component#24
+    3300030: Component#25
+    3300032: Component#26
+    3300034: Component#27
+    3300036: Component#27 1
+    3300038: Component#28
+    3300040: Component#29
+    3300042: Component#3
+    3300044: Component#30
+    3300046: Group 11
+    3300048: Group 13
+    3300050: Group 29
+    3300052: Group#3
+    3300054: Group#5
+    3300056: Omni_0
+    3300058: Omni_0 1
+    4300000: Mesh barrel
+    4300002: Mesh Omni_0
+    4300004: Mesh Component#30
+    4300006: Mesh Group#5
+    4300008: Mesh Group 11
+    4300010: Mesh Group 13
+    4300012: Mesh Component#27
+    4300014: Mesh Component#17
+    4300016: Mesh Component#26
+    4300018: Mesh Component#25
+    4300020: Mesh Component#29
+    4300022: Mesh Component#28
+    4300024: Mesh Group 29
+    4300026: Mesh Component#24
+    4300028: Mesh Component#2
+    4300030: Mesh Group#3
+    4300032: Mesh Omni_0
+    4300034: Mesh 88poot#1
+    4300036: Mesh Component#23
+    4300038: Mesh Component#3
+    4300040: Mesh Component#1
+  materials:
+    importMaterials: 1
+    materialName: 2
+    materialSearch: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0253999997
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
