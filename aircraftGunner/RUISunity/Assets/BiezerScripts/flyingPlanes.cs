@@ -2,11 +2,24 @@
 using System.Collections;
 
 public class flyingPlanes : MonoBehaviour {
+	
+	public int maxPlaneH;
+	public int defaultPlaneH;
+
+	public int minInterval;
+	public int maxInterval;
 
 	public GameObject prefab;
+	public GameObject gunner;
+	public int speed;
+
+	private float R = 300;
+	private float R2 = 3;
+	private float planeH;
 
 	void Start () {
-		Invoke ("fire", Random.Range(1, 5));
+		planeH = defaultPlaneH;
+		Invoke ("fire", Random.Range(minInterval,maxInterval));
 	}
 	
 	void Update(){
@@ -14,10 +27,29 @@ public class flyingPlanes : MonoBehaviour {
 	}
 	
 	public void fire(){
-		Vector3 poc = new Vector3 (0, 20, 300);	//TODO Random tacka treba da bude
-		GameObject avion = (GameObject) Instantiate(prefab, poc,transform.rotation);
-		avion.transform.LookAt (new Vector3 (0, avion.transform.position.y, 0)); //TODO isto malo random
-		avion.GetComponent<Rigidbody>().AddForce (transform.forward * -50, ForceMode.VelocityChange);
+		int alfa = Random.Range(-60, 60);
+		Vector3 startPos=new Vector3(gunner.transform.TransformPoint(Vector3.zero).x+R*Mathf.Sin(Mathf.Deg2Rad*alfa), planeH,
+		                        gunner.transform.TransformPoint(Vector3.zero).z+R*Mathf.Cos(Mathf.Deg2Rad*alfa));
+		planeH++;
+		if (planeH == maxPlaneH) 
+			planeH = defaultPlaneH;
+		Vector3 endPos=new Vector3(gunner.transform.TransformPoint(Vector3.zero).x+R2*Mathf.Sin(Mathf.Deg2Rad*alfa), planeH,
+		                         gunner.transform.TransformPoint(Vector3.zero).z+R2*Mathf.Cos(Mathf.Deg2Rad*alfa));
+		GameObject avion = (GameObject) Instantiate(prefab, startPos,transform.rotation);
+		avion.transform.LookAt (endPos); //TODO isto malo random
+		Vector3 direction = endPos - avion.transform.TransformPoint(Vector3.zero);
+		avion.GetComponent<Rigidbody>().AddForceAtPosition(direction*speed, avion.transform.position);
+
+		Destroy (avion, 30f);
+
+		/*GameObject child = avion.transform.GetChild (0).gameObject;
+		child.AddComponent<Rigidbody> (); // Add the rigidbody.
+		child.GetComponent<Rigidbody>().AddForceAtPosition(direction*speed, avion.transform.position);
+		child = avion.transform.GetChild (1).gameObject;
+		child.AddComponent<Rigidbody> (); // Add the rigidbody.
+		child.GetComponent<Rigidbody>().AddForceAtPosition(direction*speed, avion.transform.position);*/
+		//avion.GetComponent<Rigidbody>().AddForceAtPosition(transform.forward * 10, transform.position);
+		//avion.GetComponent<Rigidbody>().AddForceAtPosition (new Vector3(50,0, 0), kraj);
 		/*
 		float g = -Physics.gravity.y;
 		
@@ -37,7 +69,7 @@ public class flyingPlanes : MonoBehaviour {
 		projectile.transform.GetChild(0).GetComponent<Rigidbody> ().AddForce (transform.forward * speed, ForceMode.VelocityChange);
 		Destroy (projectile, 10);*/
 		Debug.Log ("DRTGRT");
-		Invoke ("fire", Random.Range(2,8));
+		Invoke ("fire", Random.Range(minInterval,maxInterval));
 	}
 	
 	

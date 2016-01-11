@@ -7,6 +7,12 @@ TagManager:
   - WaterParticle
   - StatusText
   - PlayerCollider
+  - cameraHERE
+  - eyesight
+  - ui
+  - bomb
+  - Scripts
+  - bullet
   layers:
   - Default
   - TransparentFX

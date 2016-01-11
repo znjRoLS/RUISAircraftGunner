@@ -14,6 +14,7 @@ public class RightKinectHand : MonoBehaviour {
 	//private ThalmicMyo tMyo;
 
 	public GameObject rocket;
+	public GameObject rocketLight;
 	public GameObject hand;
 	public GameObject foreArm;
 	public GameObject leftHand;
@@ -21,12 +22,12 @@ public class RightKinectHand : MonoBehaviour {
 	public GameObject gunner;
 	public GameObject gunnerTop;
 	private bool startedUsing = true;
-	private float speed=50f;
+	private float speed = 70f;
 	private float minDistance = 0.3f;
 
 	private int numberShoot;
-	private int frameRate = 10;
-
+	private int frameRate = 20;
+	private int numberOfShoot=5;
 	private Vector3 lastPos;
 	private Vector3 lastP;
 	void Start () {
@@ -41,9 +42,9 @@ public class RightKinectHand : MonoBehaviour {
 		Vector3 handPosition = hand.transform.TransformPoint(Vector3.zero);
 		Vector3 foreArmPosition = foreArm.transform.TransformPoint(Vector3.zero);
 		//float angle = Vector3.Angle(handPosition - foreArmPosition, Vector3.right);
-		Vector3 p=handPosition-foreArmPosition;
-		if(p.y<0) p.y=0;
-		Vector3 pp=(p+lastP+lastPos)/3;
+		Vector3 p = handPosition - foreArmPosition;
+		if(p.y < 0) p.y = 0;
+		Vector3 pp = (p + lastP+18*lastPos) / 20;
 		gunner.transform.LookAt(gunner.transform.TransformPoint(Vector3.zero)+pp);
 		lastPos=p;
 		lastP=pp;
@@ -52,7 +53,15 @@ public class RightKinectHand : MonoBehaviour {
 			if (numberShoot == 0) {
 				numberShoot = frameRate;
 				if(Vector3.Distance(leftHand.transform.TransformPoint(Vector3.zero),foreArmPosition) < minDistance){
+				numberOfShoot--;
+				if(numberOfShoot==0)
+				{
+					numberOfShoot=5;
+					shoot(rocketLight,gunner.transform.TransformPoint(Vector3.zero),gunnerTop.transform.TransformPoint(Vector3.zero), speed);
+				}
+				else
 					shoot(rocket,gunner.transform.TransformPoint(Vector3.zero),gunnerTop.transform.TransformPoint(Vector3.zero), speed);
+
 				}
 			}
 
@@ -93,9 +102,7 @@ public class RightKinectHand : MonoBehaviour {
 	public static void shoot(GameObject rocket, Vector3 pointOne, Vector3 pointTwo, float speed){
 		GameObject newRocket = (GameObject)Instantiate (rocket, pointTwo, Quaternion.identity);
 		newRocket.GetComponent<Rigidbody>().velocity = (pointTwo - pointOne).normalized * speed;
-		newRocket.transform.LookAt (2*pointTwo-pointOne);		
-		//newRocket.transform.Rotate(new Vector3(0, 0, angle));
-		//newRocket.GetComponent<Rigidbody> ().AddTorque (newRocket.transform.up * 600f);		
+		newRocket.transform.LookAt (2*pointTwo-pointOne);	
 		Destroy (newRocket, 5);
 	}
 }

@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-using System;
+//using System;
 using UnityEngine;
 using System.Collections;
 
@@ -16,8 +16,19 @@ public class pogodakKrila : MonoBehaviour
 	public GameObject explosionPrefab;
 	private bool isDone = false;
 
+	public float planeScore;
+
+	private float planeWingSpeed = 1000f;
+	private float planeSpeed = 10f;
+
 	void OnTriggerEnter(Collider other){
-		//if (other.gameObject.tag.Equals("PlayerCollider")){
+
+		if (other.tag != "bullet") {
+		
+			Debug.Log ("nece dva krila");
+			return;
+		}
+
 		if (!isDone) {	
 
 			GameObject parent = transform.parent.gameObject;
@@ -25,17 +36,26 @@ public class pogodakKrila : MonoBehaviour
 			GameObject explosion = (GameObject)Instantiate (explosionPrefab, parent.transform.TransformPoint (Vector3.zero), transform.rotation);
 			Destroy (explosion, 2);
 
-			GameObject child = parent.transform.GetChild (0).gameObject;
+
+			//krilo
+			GameObject child = parent.transform.GetChild (1).gameObject;
 			child.AddComponent<Rigidbody> (); // Add the rigidbody.
 			child.GetComponent<Rigidbody> ().mass = 1;
-			child.GetComponent<Rigidbody> ().AddForce (new Vector3 (100, 100, 100));
-			
-			child = parent.transform.GetChild (1).gameObject;
-			child.AddComponent<Rigidbody> (); // Add the rigidbody.
-			child.GetComponent<Rigidbody> ().mass = 1;
-			child.GetComponent<Rigidbody> ().AddForce (new Vector3 (-100, -100, -100));                             
-			//}
+			child.GetComponent<Rigidbody>().useGravity=true;
+			Vector3 direction =new Vector3(Random.Range(5,10),-child.transform.TransformPoint(Vector3.zero).y,Random.Range(-2,2));
+			child.GetComponent<Rigidbody>().AddForceAtPosition(direction*15, child.transform.position);
+			child.transform.Rotate(new Vector3(0, 0, 50));
+			child.GetComponent<Rigidbody> ().AddTorque (child.transform.up * planeWingSpeed);
+
+
+			//ostatak aviona
+			parent.GetComponent<Rigidbody> ().mass = 1;
+			parent.GetComponent<Rigidbody>().useGravity=true;
+			parent.GetComponent<Rigidbody> ().AddTorque (child.transform.up * planeSpeed);
+		
 			isDone = true;
+
+			GameObject.FindGameObjectWithTag("Scripts").GetComponent<PlayerHealth>().getScore(planeScore);
 		}
 	}
 	public pogodakKrila ()
