@@ -24,7 +24,7 @@ Loading C:\Users\Nordeus\Desktop\aircraftGunner\aircraftGunner\RUISunity\Avax_Da
 Platform assembly: C:\Users\Nordeus\Desktop\aircraftGunner\aircraftGunner\RUISunity\Avax_Data\Managed\OpenNI.Net.dll (this message is harmless)
 Loading C:\Users\Nordeus\Desktop\aircraftGunner\aircraftGunner\RUISunity\Avax_Data\Managed\OpenNI.Net.dll into Unity Child Domain
 Platform assembly: C:\Users\Nordeus\Desktop\aircraftGunner\aircraftGunner\RUISunity\Avax_Data\Managed\System.Core.dll (this message is harmless)
-- Completed reload, in  0.162 seconds
+- Completed reload, in  0.045 seconds
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
@@ -82,8 +82,20 @@ XML validation finished for defaultDisplay.xml!
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: a30 -> priority: 1 
-  Thread -> id: 1d4 -> priority: 1 
+  Thread -> id: 68c -> priority: 1 
+  Thread -> id: ba0 -> priority: 1 
+DRTGRT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+Updated Kinect 2 floor normal (0.1, 1.0, 0.2) and floor distance (0)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
+DRTGRT
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)
+
 DRTGRT
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 64)

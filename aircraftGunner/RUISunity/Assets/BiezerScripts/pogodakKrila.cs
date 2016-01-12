@@ -44,7 +44,7 @@ public class pogodakKrila : MonoBehaviour
 			child.GetComponent<Rigidbody>().useGravity=true;
 			Vector3 direction =new Vector3(Random.Range(5,10),-child.transform.TransformPoint(Vector3.zero).y,Random.Range(-2,2));
 			child.GetComponent<Rigidbody>().AddForceAtPosition(direction*15, child.transform.position);
-			child.transform.Rotate(new Vector3(0, 0, 50));
+			child.transform.Rotate(new Vector3(0, 0, Random.Range(50,70)));
 			child.GetComponent<Rigidbody> ().AddTorque (child.transform.up * planeWingSpeed);
 
 
