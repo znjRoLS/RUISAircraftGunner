@@ -81,6 +81,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 443846}
+  - 135: {fileID: 13531424}
+  - 114: {fileID: 11413208}
   m_Layer: 0
   m_Name: WO Left Wing
   m_TagString: Untagged
@@ -121,7 +123,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 72.6399994, y: 44.8499985, z: 70.721405}
+  m_LocalPosition: {x: 72.6399994, y: 38.7999992, z: 70.721405}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1.20000005}
   m_Children:
   - {fileID: 443846}
@@ -314,6 +316,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11413208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2daf379baf1ff734ab946893840ac472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 100000, guid: c9d5cd88175043e4682f5575c3340d37, type: 2}
+  planeScore: 10
 --- !u!114 &11440176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -339,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minInterval: 3
-  maxInterval: 3.5
+  maxInterval: 4.5
   force: 1000
   bomb: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
 --- !u!114 &11467814
@@ -355,6 +370,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 0}
   planeScore: 0
+--- !u!135 &13531424
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 194220}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .100000001
+  m_Center: {x: .150000006, y: 0, z: 0}
 --- !u!135 &13537258
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -365,8 +392,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .0799999982
-  m_Center: {x: -.0758392513, y: .00329937623, z: .00589761697}
+  m_Radius: .100000001
+  m_Center: {x: -.150000006, y: .00329937623, z: .00589761697}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -380,7 +407,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxInterval
-      value: 3.5
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bomb

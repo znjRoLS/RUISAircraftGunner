@@ -619,7 +619,7 @@ public class RUISTracker : MonoBehaviour
 	void Update () 
 	{
 		Debug.Log ("hahhaha");
-		transform.position = GameObject.FindGameObjectWithTag ("cameraHERE").transform.position;
+		GameObject.FindGameObjectWithTag("MainCamera").transform.position = GameObject.FindGameObjectWithTag ("cameraHERE").transform.position;
 		//transform.position= GameObject.FindGameObjectWithTag("cameraHERE").transform.TransformPoint(Vector3.zero);
 		//		print (OclusCameraOrigin ());
 		if(!filterInFixedUpdate)
@@ -637,6 +637,10 @@ public class RUISTracker : MonoBehaviour
 		// Beginning of invocations that are needed by RUISCamera's oblique frustum creation
 		//transform.position = GameObject.FindGameObjectWithTag("cameraHERE").transform.position;
 		eyeCenterPosition = transform.localPosition;
+
+		GameObject.FindGameObjectWithTag("lc").transform.position = GameObject.FindGameObjectWithTag ("cameraHERE").transform.position;
+		GameObject.FindGameObjectWithTag("rc").transform.position = GameObject.FindGameObjectWithTag ("cameraHERE").transform.position;
+		GameObject.FindGameObjectWithTag("cc").transform.position = GameObject.FindGameObjectWithTag ("cameraHERE").transform.position;
 		// End of invocations that are needed by RUISCamera's oblique frustum creation
 	}
 	

@@ -131,6 +131,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 440492}
+  - 135: {fileID: 13522324}
+  - 114: {fileID: 11446702}
   m_Layer: 0
   m_Name: Plane1Ostatak
   m_TagString: Untagged
@@ -145,7 +147,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 151594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50, y: 50, z: 60}
+  m_LocalPosition: {x: 53.6899986, y: 50, z: 60}
   m_LocalScale: {x: .5, y: .5, z: .5}
   m_Children:
   - {fileID: 440492}
@@ -543,6 +545,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11446702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2daf379baf1ff734ab946893840ac472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 100000, guid: c9d5cd88175043e4682f5575c3340d37, type: 2}
+  planeScore: 7
 --- !u!114 &11460334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -556,6 +571,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 100000, guid: c9d5cd88175043e4682f5575c3340d37, type: 2}
   planeScore: 7
+--- !u!135 &13522324
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 199308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: .800000012
+  m_Center: {x: -.800000012, y: -1, z: 0}
 --- !u!135 &13545064
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -566,8 +593,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: -.0258715693, y: .192598358, z: -.157948092}
+  m_Radius: .800000012
+  m_Center: {x: 0, y: .400000006, z: -.157948092}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

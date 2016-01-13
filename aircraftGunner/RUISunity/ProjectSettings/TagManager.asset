@@ -13,6 +13,10 @@ TagManager:
   - bomb
   - Scripts
   - bullet
+  - lc
+  - rc
+  - cc
+  - New Tag
   layers:
   - Default
   - TransparentFX

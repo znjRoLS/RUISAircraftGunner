@@ -23,10 +23,10 @@ public class RightKinectHand : MonoBehaviour {
 	public GameObject gunnerTop;
 	private bool startedUsing = true;
 	private float speed = 200f;
-	private float minDistance = 0.3f;
-
+	private float minDistance = 0.4f;
+	public GameObject PointShot;
 	private int numberShoot;
-	private int frameRate = 15;
+	private int frameRate = 5;
 	private int numberOfShoot=5;
 	private Vector3 lastPos;
 	private Vector3 lastP;
@@ -52,7 +52,7 @@ public class RightKinectHand : MonoBehaviour {
 			numberShoot --;
 			if (numberShoot == 0) {
 				numberShoot = frameRate;
-				if(Vector3.Distance(leftHand.transform.TransformPoint(Vector3.zero),foreArmPosition) < minDistance){
+			if(Vector3.Distance(leftHand.transform.TransformPoint(Vector3.zero),PointShot.transform.TransformPoint(Vector3.zero)) < minDistance){
 				numberOfShoot--;
 				if(numberOfShoot==0)
 				{
