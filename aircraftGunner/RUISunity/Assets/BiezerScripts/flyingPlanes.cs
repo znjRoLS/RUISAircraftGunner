@@ -19,11 +19,22 @@ public class flyingPlanes : MonoBehaviour {
 
 	void Start () {
 		planeH = defaultPlaneH;
-		Invoke ("fire", Random.Range(minInterval,maxInterval));
+		//startFire ();
 	}
 	
 	void Update(){
 		
+	}
+
+	public void startFire()
+	{
+		
+		Invoke ("fire", Random.Range(minInterval,maxInterval));
+	}
+
+	public void stopFire()
+	{
+		CancelInvoke ("fire");
 	}
 	
 	public void fire(){

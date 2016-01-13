@@ -16,7 +16,9 @@ TagManager:
   - lc
   - rc
   - cc
-  - New Tag
+  - UI
+  - gameOverLight
+  - avion
   layers:
   - Default
   - TransparentFX

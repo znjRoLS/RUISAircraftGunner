@@ -59,6 +59,7 @@ GameObject:
   - 4: {fileID: 425708}
   - 54: {fileID: 5471974}
   - 136: {fileID: 13681882}
+  - 114: {fileID: 11467046}
   m_Layer: 0
   m_Name: granataK
   m_TagString: bullet
@@ -100,7 +101,7 @@ Transform:
   m_GameObject: {fileID: 171794}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50.9599991, y: -2.94971013, z: -8.55380344}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 401600}
   m_Father: {fileID: 0}
@@ -189,11 +190,23 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: .0500000007
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &11467046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795947dfab0684e48b95a49d2e52281e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 100000, guid: c9d5cd88175043e4682f5575c3340d37, type: 2}
 --- !u!136 &13681882
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -218,6 +231,26 @@ Prefab:
       propertyPath: m_TagString
       value: bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.z
+      value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: explosionPrefab
+      value: 
+      objectReference: {fileID: 100000, guid: c9d5cd88175043e4682f5575c3340d37, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 171794}

@@ -22,7 +22,7 @@ public class BaseExplosion : MonoBehaviour {
 			return;
 
 		GameObject explosion = (GameObject)Instantiate (explosionPrefab, other.transform.position, transform.rotation);
-		explosion.transform.localScale *= 2f;
+		explosion.transform.localScale *= 3f;
 			Destroy (explosion, 2);
 			
 		GameObject.FindGameObjectWithTag("Scripts").GetComponent<PlayerHealth> ().takeDamage (bombDamage);
