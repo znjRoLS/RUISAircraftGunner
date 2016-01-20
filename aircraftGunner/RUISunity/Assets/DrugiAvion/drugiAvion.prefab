@@ -384,8 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef1d7d40cc33a2a479d8ba5eed6500e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minInterval: 3
-  maxInterval: 4.5
+  minInterval: 3.5
+  maxInterval: 4.19999981
   force: 1000
   bomb: {fileID: 100000, guid: 0a32eb7de2f475b4c9297c23a9c1b1bd, type: 2}
 --- !u!135 &13531424
@@ -398,8 +398,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .100000001
-  m_Center: {x: .150000006, y: 0, z: 0}
+  m_Radius: .0599999987
+  m_Center: {x: .0599999987, y: 0, z: 0}
 --- !u!135 &13537258
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -410,8 +410,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .100000001
-  m_Center: {x: -.150000006, y: .00329937623, z: .00589761697}
+  m_Radius: .0599999987
+  m_Center: {x: -.0599999987, y: .00329937623, z: .00589761697}
 --- !u!198 &19861590
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1495,11 +1495,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: minInterval
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxInterval
-      value: 4.5
+      value: 4.19999981
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: bomb
@@ -1537,6 +1537,10 @@ Prefab:
       propertyPath: smokePrefab
       value: 
       objectReference: {fileID: 189784, guid: 17667c0dd0f518f429564d1286a735b5, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 139338}

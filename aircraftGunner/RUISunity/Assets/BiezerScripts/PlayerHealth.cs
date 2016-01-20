@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System;
@@ -30,6 +30,7 @@ public class PlayerHealth : MonoBehaviour {
 		InvokeRepeating ("RegenerateHealth", regenerationTime, regenerationTime);
 		String str = health.ToString ();
 		hp.text = str;
+		pts.text = this.points.ToString ();
 
 		foreach ( flyingPlanes obj in GameObject.FindGameObjectWithTag ("Scripts").GetComponents <flyingPlanes>())
 		{
@@ -71,6 +72,10 @@ public class PlayerHealth : MonoBehaviour {
 	{
 		if (health < 100 && health != 0)
 			health++;
+		healthSlider.value = health/defaultHealth * 100;
+		Debug.Log (health.ToString () + "hp");
+		String str = health.ToString ();
+		hp.text = str;
 	}
 
 	private void GameOver()
